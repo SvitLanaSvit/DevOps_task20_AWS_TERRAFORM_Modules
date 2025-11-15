@@ -35,11 +35,11 @@ terraform/
 ## Запуск
 
 ## Налаштування AWS користувача
-1. Створіть IAM користувача з ім'ям `create-terraform-user`.
-2. Згенеруйте для нього Access Key та Secret Key (інструкції та приклади у папці `docs/aws-credentials-setup`).
+1. Створіть IAM користувача з ім'ям `sk-terraform-user`. **📋 Детальні інструкції**: [create-terraform-user.md](docs/create-terraform-user.md)
+2. Згенеруйте для нього Access Key та Secret Key (**📋 Налаштування credentials**: [aws-credentials-setup.md](docs/aws-credentials-setup.md)).
 3. Додайте користувачу такі права:
    - `AmazonEC2FullAccess`
-   - Кастомна політика `S3AccessOnlyToSvitlanaKizilpinarBucket` (приклад у `docs/aws-credentials-setup/add-ec2-permissions`).
+   - Кастомна політика `S3AccessOnlyToSvitlanaKizilpinarBucket` ([детальніше про EC2 політики](docs/add-ec2-permissions.md)).
 4. Не створюйте новий S3 bucket! Використовуйте вже наданий bucket: `terraform-state-danit10-devops` (region: eu-central-1).
 
 ## Запуск
