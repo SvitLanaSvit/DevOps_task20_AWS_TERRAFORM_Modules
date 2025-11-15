@@ -1,0 +1,110 @@
+AWS Terraform Module Exercise
+Завдання
+Створіть модуль Terraform, який приймає такі вхідні значення:
+
+
+
+vpc_id
+list_of_open_ports
+Потім створіть в регіоні eu-central-1:
+
+
+
+групу безпеки (security group), яка дозволяє доступ звідусіль до портів, переданих у вхідних даних, у вказаній VPC;
+публічний екземпляр EC2 у вказаній VPC з установленим сервером Nginx за замовчуванням або Nginx, який працює у контейнері.
+Потім виведіть:
+
+
+
+IP створеного екземпляра
+Використайте http://IP, щоб підтвердити, що Nginx працює.
+
+
+
+
+
+Backend
+Налаштуйте S3 backend для вашого проєкту:
+
+
+
+Використайте bucket terraform-state-danit-devops у регіоні eu-central-1
+Налаштуйте унікальний шлях для вашого state-файлу, використовуючи ваше ім’я користувача
+Переконайтесь, що файл створюється у bucket і оновлюється при зміні інфраструктури
+
+
+
+
+Для читання
+Provision an EC2 Instance with Terraform
+Terraform AWS Security Group Documentation
+Terraform AWS Instance Documentation
+How to Store Terraform State in S3
+
+
+
+
+ENG:
+
+
+
+
+
+To Do
+AWS Terraform Module Exercise
+Task
+Create a Terraform module that takes the following input values:
+
+
+
+vpc_id
+list_of_open_ports
+Then creates in the eu-central-1 region:
+
+
+
+A security group that allows access from anywhere to ports from input in the specified VPC
+A public EC2 instance in the specified VPC with an installed default Nginx server or Nginx running in a container
+Then outputs:
+
+
+
+IP of the created instance
+Use http://IP to confirm that Nginx is running
+
+
+
+
+
+Backend
+Configure S3 backend for your project
+
+
+
+Use the terraform-state-danit-devops bucket in the eu-central-1 region
+Configure a unique path for your state by using your login name
+Ensure that the file is created in the bucket and gets updated when you change the infrastructure
+
+
+
+
+To Read
+Provision an EC2 Instance with Terraform
+Terraform AWS Security Group Documentation
+Terraform AWS Instance Documentation
+How to Store Terraform State in S3
+
+
+
+
+Формат здачі ДЗ:
+
+1. Код з створенням модуля й всього необхідного для підняття інфраструктури
+
+2. Скрін з підняттям інфраструктури
+
+3. Скрін з EC2 та його IP
+
+4. Cкрін з працюючим nginx
+
+5. Скрін з змістом бакета, де ваш стейт файл
